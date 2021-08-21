@@ -1,21 +1,20 @@
-"""mnt_backend URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
+from main_app import views
+
+router = routers.DefaultRouter()
+#allows you to call /api/users giving you all of the users
+#allows you to call /api/users/id - returning a single user using the id primary key
+# Allows users to Update / Delete users
+#Inside Django REST Framework you can edit your specific inputs aswell!!!
+router.register(r'users', views.UserView, 'main_app')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
 ]
+
+
+
+
