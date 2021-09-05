@@ -8,7 +8,7 @@ class User(models.Model):
     email = models.TextField()
     ticker = models.CharField(max_length=25)
     investmentAmount = models.IntegerField(default=100)
-    tickerarray = ArrayField(models.TextField())
+    tickerarray = ArrayField(models.TextField(), blank=True, null=True)
 
     def _str_(self):
         return self.name
