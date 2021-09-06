@@ -82,7 +82,12 @@ WSGI_APPLICATION = 'mnt_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangomnt',
+        # 'NAME': 'djangomnt',
+        'NAME': 'dbc4eadc9i2qqp',
+        'HOST': 'ec2-52-6-77-239.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'nmucujzfqbwqla',
+        'PASSWORD': 'a7a2e55987f4965035536410118b1db724c52ea4969087f853a5a7a20719d68d'
     }
 }
 
