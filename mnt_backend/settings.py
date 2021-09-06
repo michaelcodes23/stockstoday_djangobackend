@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-bet(g!gzd-(xn0*lec*#f1d@o6r+^d&(aknx5^3^7qq(1$c)_f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['marketnewstoday-djangobackend.herokuapp.com/','127.0.0.1','*']
 
 
 # Application definition
